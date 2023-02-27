@@ -1,51 +1,23 @@
-import "./App.css";
-import Student from "./components/Student";
-import StudentList from "./components/StudentList";
-import NavigationBar from "./components/NavigationBar";
-import Footer from "./components/Footer";
-import Container from "react-bootstrap/Container";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MyAlert from "./components/MyAlert";
-import React, { useState } from "react";
-import Login from "./components/Login";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const [alert, setAlert] = useState(null);
-
-  let showAlert = (type, message) => {
-    setAlert({
-      type: type,
-      message: message,
-    });
-    setTimeout(() => {
-      setAlert(null);
-    }, 3000);
-  };
-
   return (
     <div className="App">
-      <Router>
-        <NavigationBar />
-        <MyAlert alert={alert} />
-        <Container>
-          <Routes>
-            <Route path="student" element={<Student showAlert={showAlert} />} />
-            <Route
-              path="student/:studentId"
-              element={<Student showAlert={showAlert} />}
-            />
-            <Route
-              path="listStudents"
-              element={<StudentList showAlert={showAlert} />}
-            />
-            <Route
-              path="login"
-              element={<Login showAlert={showAlert} />}
-            />
-          </Routes>
-        </Container>
-        <Footer />
-      </Router>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Hello AWS! Jay lakhani from AWS 2023
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
