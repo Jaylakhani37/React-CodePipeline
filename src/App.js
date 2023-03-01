@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Project Vandan
+          Learn Project Raj Belu
         </a>
       </header>
     </div>
