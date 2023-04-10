@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Implemeted CI/CD - DOne!
+          Implemeted CI/CD
         </a>
       </header>
     </div>
