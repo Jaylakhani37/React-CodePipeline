@@ -7,13 +7,14 @@ CodeDeployRole
 2. Create EC2 Instance and Attach that EC2 role.
 
 and install code depoloy agent
-
+```` 
 sudo yum update
 sudo yum install ruby
 sudo yum install wget
 wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
+```` 
 
 
 3. aws codepipeline following steps:
@@ -23,9 +24,8 @@ Step 2: Code Source (CodeCommit or Github)
 Step 3: Skip Build(Feature)
 Step 4: Choose Code Depoloy
 
-#=======================================================================================================
 
-Appspec.yml file structure:
+## Appspec.yml file structure:
 
 
 --------------------
@@ -48,7 +48,7 @@ hooks:
 --------------------
 afterinstall.sh
 --------------------
-
+```
 #!/bin/bash
 
 cd /home/ec2-user/server
@@ -66,16 +66,19 @@ rm -rf build
 npm -f install
 npm run build
 npm install -g pm2
+``````
 
 
 --------------------
 applicationstart.sh
 --------------------
 
+``````
 #!/bin/bash
 
 cd /home/ec2-user/server
 sudo pm2 delete Frontend
 sudo pm2 start server.js --name Frontend
+``````
 
 
