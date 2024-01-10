@@ -1,7 +1,7 @@
-
+# React App Automation 
 1. Create IAM Role for EC2 and AWS CodeDeploy
 
-EC2RoleForS3
+EC2RoleForS3##
 CodeDeployRole
 
 2. Create EC2 Instance and Attach that EC2 role.
